@@ -1,3 +1,101 @@
 {
-  "extends": "next/core-web-vitals"
+	"extends": [
+		"next/core-web-vitals"
+	],
+	"plugins": [
+		"@typescript-eslint"
+	],
+	"rules": {
+		"max-len": [
+			"error",
+			160
+		],
+		"spaced-comment": "error",
+		"sort-keys": "error",
+		"space-before-function-paren": [
+			"error",
+			{
+				"anonymous": "always",
+				"asyncArrow": "always",
+				"named": "never"
+			}
+		],
+		"quotes": [
+			"error",
+			"single",
+			{
+				"avoidEscape": true,
+				"allowTemplateLiterals": true
+			}
+		],
+		"quote-props": [
+			"error",
+			"consistent-as-needed"
+		],
+		"one-var": [
+			"error",
+			"never"
+		],
+		"no-var": "error",
+		"no-console": "warn",
+		"no-unused-vars": "off",
+		"indent": [
+			"error",
+			"tab"
+		],
+		"semi": [
+			"error",
+			"never"
+		],
+		"@typescript-eslint/no-floating-promises": "off",
+		"@typescript-eslint/array-type": [
+			"error",
+			{
+				"default": "array-simple"
+			}
+		],
+		"@typescript-eslint/explicit-member-accessibility": "error",
+		"@typescript-eslint/explicit-function-return-type": [
+			"error",
+			{
+				"allowExpressions": true
+			}
+		],
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/no-unused-vars": [
+			"error",
+			{
+				"ignoreRestSiblings": true
+			}
+		],
+		"@typescript-eslint/no-inferrable-types": "off",
+		"@typescript-eslint/naming-convention": [
+			"error",
+			{
+				"selector": ["typeLike"],
+				"format": [
+					"PascalCase"
+				]
+			},
+			{
+				"selector": ["variableLike", "memberLike", "property", "method"],
+				"format": [
+					"camelCase",
+					"PascalCase" // TODO: React variable components should be PascalCase. Custom React settings?
+				]
+			},
+			{
+				"selector": ["enumMember"],
+				"format": ["UPPER_CASE"]
+			}
+		],
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/no-shadow": [
+			"error",
+			{
+				"builtinGlobals": false,
+				"hoist": "all"
+			}
+		]
+	}
 }
